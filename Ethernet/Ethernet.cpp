@@ -24,8 +24,7 @@ int EthernetClass::begin(void)
 
         // Now try to get our config info from a DHCP server
         int ret = _dhcp->beginWithDHCP(mac_address);
-        if(ret == 1)
-        {
+        if(ret == 1) {
                 // We've successfully found a DHCP server and got our configuration info, so set things
                 // accordingly
                 W5100.setIPAddress(_dhcp->getLocalIp().raw_address());
